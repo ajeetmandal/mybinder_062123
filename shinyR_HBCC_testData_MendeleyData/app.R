@@ -6,7 +6,7 @@ library("iSEE")
 #To retrieve an option
 #getOption('timeout')
 #To set an option
-options(timeout=600)
+options(timeout=3600)
 ###########################################
 # Fetch the data from MendeleyData
 dat <- ("https://data.mendeley.com/drafts/4pmcfgy9ss#:~:text=SCE_DLPFC%2D-,n3_tran,-%2Detal.rda/SCE_DLPFC-n3_tran-etal.rda")
