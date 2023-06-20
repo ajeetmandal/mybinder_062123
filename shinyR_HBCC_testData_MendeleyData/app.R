@@ -3,18 +3,20 @@ library("iSEE")
 #library("SingleCellExperiment") # dont need them as "iSEE" have these all
 #library("shiny") # dont need them as "iSEE" have these all
 ###########################################
-# Fetch the data from MendeleyData
-#dat <- ("https://data.mendeley.com/drafts/4pmcfgy9ss#:~:text=SCE_DLPFC%2D-,n3_tran,-%2Detal.rda/SCE_DLPFC-n3_tran-etal.rda")
-#download.file(dat, destfile = "SCE_DLPFC-n3_tran-etal.rda")
-
 #To retrieve an option
 #getOption('timeout')
 #To set an option
-options(timeout=180)
+options(timeout=600)
+###########################################
+# Fetch the data from MendeleyData
+dat <- ("https://data.mendeley.com/drafts/4pmcfgy9ss#:~:text=SCE_DLPFC%2D-,n3_tran,-%2Detal.rda/SCE_DLPFC-n3_tran-etal.rda")
+download.file(dat, destfile = "SCE_DLPFC-n3_tran-etal.rda")
+
+
 
 # Fetch the data from FigShare
-dat <- ("https://figshare.com/ndownloader/files/39149009/SCE_DLPFC-n3_tran-etal.rda")
-download.file(dat, destfile = "SCE_DLPFC-n3_tran-etal.rda")
+#dat <- ("https://figshare.com/ndownloader/files/39149009/SCE_DLPFC-n3_tran-etal.rda")
+#download.file(dat, destfile = "SCE_DLPFC-n3_tran-etal.rda")
 
 sce_small <- load("SCE_DLPFC-n3_tran-etal.rda")
 sce_small <- sce.dlpfc.tran
